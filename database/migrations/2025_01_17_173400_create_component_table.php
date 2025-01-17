@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('prototipo', function (Blueprint $table) {
-            $table->string('id')->primary();
+        Schema::create('component', function (Blueprint $table) {
+            $table->id();
             $table->string('Serial');
-            $table->string('Modelo');
             $table->string('Categoria');
-            $table->string('Caracteristicas');
+            $table->string('Nombre');
             $table->string('Observaciones');
+            $table->string('Caracteristicas');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('prototipo');
+        Schema::dropIfExists('component');
     }
 };
