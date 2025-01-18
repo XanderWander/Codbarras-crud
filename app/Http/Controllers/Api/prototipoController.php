@@ -108,7 +108,7 @@ class prototipoController extends Controller{
 
     public function update(Request $request, $id)
     {
-       $prototipo = Prototipo::find(id);
+       $prototipo = Prototipo::find($id);
 
        if(!$prototipo)
        {
@@ -176,7 +176,7 @@ class prototipoController extends Controller{
             'Observaciones' => 'required',
         ]);
 
-       if($valdate->fails()){
+       if($validator->fails()){
         $data = [
             'message' => 'Error en la validación',
             'errors' => $validator->errors(),
