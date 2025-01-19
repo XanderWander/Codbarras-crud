@@ -1,11 +1,9 @@
 // filepath: frontend/src/router.js
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from './components/Home.vue';
-import About from './components/About.vue';
+import Prototipo from './components/PrototipoComponent.vue';
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/about', component: About }
+  { path: '/prototipo', components: Prototipo },
 ];
 
 const router = createRouter({
